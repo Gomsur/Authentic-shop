@@ -10,3 +10,12 @@ The application also includes user authentication, a user profile, and a newslet
 
 
 - **Product Browsing:**
+
+- **Shopping Cart:**
+
+- **Payment:**
+
+- **Order Management:**
+
+- **Newsletter Signup:**
+
