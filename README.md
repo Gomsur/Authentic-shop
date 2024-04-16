@@ -29,4 +29,10 @@ The application also includes user authentication, a user profile, and a newslet
 
 - **Newsletter Signup:**
   - Users can sign up for the newsletter to receive updates and promotions.
-  
+
+### For Admin:
+- **Admin Dashboard:**
+  - Manage products: Add, edit, and delete products with categories.
+  - View and manage orders: Mark orders as fulfilled, and view order details.
+  - Can manage users.
+  - View user reviews and manage them.
