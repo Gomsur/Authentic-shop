@@ -81,3 +81,13 @@ The application also includes user authentication, a user profile, and a newslet
    ```bash
    python manage.py migrate
    ```      
+
+4. Create a superuser (admin):
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+5. Start the development server:
+   ```bash
+   python manage.py runserver
+   ```      
