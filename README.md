@@ -91,3 +91,5 @@ The application also includes user authentication, a user profile, and a newslet
    ```bash
    python manage.py runserver
    ```      
+
+6. Access the admin panel at `http://127.0.0.1:8000/admin` to manage products and categories.   
