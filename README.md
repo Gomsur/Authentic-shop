@@ -137,3 +137,7 @@ The project follows a standard Django project structure with the following key c
     - `urls.py` (URL patterns)
   - `config/` (Project settings and configurations)
   - `manage.py` (Django management script)
+
+  ## Screenshots
+
+  ## Credits
