@@ -103,3 +103,11 @@ The application also includes user authentication, a user profile, and a newslet
 4. Create a secure Full Stack Web application that incorporates Authentication and role-based Authorisation functionality
 5. Employ marketing techniques to create brand reach
 6. Understand the fundamentals of E-commerce applications
+
+### Assessment Criteria
+The project was developed with the following criteria in mind:
+- **E-commerce Functionality:** Implemented using Django, with features such as shopping cart checkout, subscription payments, product reviews, etc.
+- **User Experience Design:** Designed for accessibility, UX principles, and user interaction.
+- **SEO Techniques:** Meta tags, sitemap, robots.txt, and SEO-friendly content.
+- **Authentication & Authorization:** User registration, login, and role-based access control.
+- **Marketing Strategies:** Facebook Business Page, newsletter signup form.
