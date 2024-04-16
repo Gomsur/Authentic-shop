@@ -128,3 +128,12 @@ The project was developed with the following criteria in mind:
 
 ## Project Structure
 The project follows a standard Django project structure with the following key components:
+- `project/` (Main project directory)
+  - `app/` (Main application directory)
+    - `templates/` (HTML templates)
+    - `static/` (Static files: CSS, JavaScript, images)
+    - `models.py` (Django models)
+    - `views.py` (Django views)
+    - `urls.py` (URL patterns)
+  - `config/` (Project settings and configurations)
+  - `manage.py` (Django management script)
