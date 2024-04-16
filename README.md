@@ -60,3 +60,6 @@ The application also includes user authentication, a user profile, and a newslet
 
   - **Database:**
   - Postgres
+
+  - **Payment Integration:**
+  - Stripe
