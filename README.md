@@ -95,3 +95,11 @@ The application also includes user authentication, a user profile, and a newslet
 6. Access the admin panel at `http://127.0.0.1:8000/admin` to manage products and categories. 
 
 ## Learning Outcomes and Assessment Criteria
+
+### Learning Outcomes
+1. Integrate an e-commerce payment system and product structure in a cloud-hosted Full-Stack web application
+2. Employ advanced User Experience Design to build a commercial-grade Full Stack Web Application
+3. Employ Search Engine Optimisation (SEO) techniques to improve audience reach
+4. Create a secure Full Stack Web application that incorporates Authentication and role-based Authorisation functionality
+5. Employ marketing techniques to create brand reach
+6. Understand the fundamentals of E-commerce applications
