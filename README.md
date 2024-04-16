@@ -125,3 +125,6 @@ The project was developed with the following criteria in mind:
 - [x] Set DEBUG mode to False
 - [x] Implemented user registration, login, and E-commerce functionality
 - [x] Provided detailed testing write-ups
+
+## Project Structure
+The project follows a standard Django project structure with the following key components:
