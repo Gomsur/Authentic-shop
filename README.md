@@ -63,3 +63,21 @@ The application also includes user authentication, a user profile, and a newslet
 
   - **Payment Integration:**
   - Stripe
+
+  ## Getting Started
+
+  ### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/online-store.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Set up the database:
+   ```bash
+   python manage.py migrate
+   ```      
