@@ -36,3 +36,6 @@ The application also includes user authentication, a user profile, and a newslet
   - View and manage orders: Mark orders as fulfilled, and view order details.
   - Can manage users.
   - View user reviews and manage them.
+
+  ### Development Methodology
+  - **Agile Methodologies:** Agile practices were followed during the development process, with regular updates and feature additions in the GitHub repository.
