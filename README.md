@@ -45,3 +45,11 @@ The application also includes user authentication, a user profile, and a newslet
   ### Digital Marketing
   - **Facebook Business Page:** A real or mockup Facebook business page is utilized for digital marketing efforts.
   - **Newsletter Signup:** A newsletter signup form is available for users to subscribe to updates and promotions.
+
+  ## Technologies Used
+
+  - **Frontend:**
+  - HTML
+  - CSS
+  - JavaScript
+  - Bootstrap v4.6
