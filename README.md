@@ -53,3 +53,7 @@ The application also includes user authentication, a user profile, and a newslet
   - CSS
   - JavaScript
   - Bootstrap v4.6
+
+  - **Backend:**
+  - Python 3.12
+  - Django 5.0.3
