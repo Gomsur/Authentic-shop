@@ -4,6 +4,27 @@ Welcome to our Online Store project! This Full-Stack web application allows user
 Admin users can manage products, categories, and orders. 
 The application also includes user authentication, a user profile, and a newsletter signup feature.
 
+## Contents
+
+- [Features] (#features)
+- [For-Users](#for-users)
+    - [User-Authentication](#for-users)
+    - [Product-Browsing](#for-users)
+    - [Shopping-Cart](#for-users)
+    - [Payment](#for-users)
+    - [Order-Management](#for-users)
+    - [Newsletter-signup](#for-users)
+- [For-Admin](#for-admin)
+    - [Admin-Dashboard](#for-admin)
+- [Development-Methodologies](#development-methodology)
+- [SEO-And-Marketing](#seo-and-marketing)
+- [Digital-Marketing](#digital-marketing)
+- [Technologies](#technologies-used)
+- [Getting-started](#getting-started)
+    - [Installation](#installation)
+- [Learning-Outcomes-and-assesment-criterias](#learning-outcomes-and-assessment-criteria)
+    - [Learning-Outcomes](#learning-outcomes)
+
 ## Features
 
 ### For Users:
@@ -139,6 +160,8 @@ The project follows a standard Django project structure with the following key c
   - `manage.py` (Django management script)
 
   ## Screenshots
+
+  ## Stripe
 
   ## Credits
   - Stripe for payment
