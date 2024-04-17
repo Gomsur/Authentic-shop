@@ -6,7 +6,7 @@ The application also includes user authentication, a user profile, and a newslet
 
 ## Contents
 
-- [Features] (#features)
+- [Features](#features)
 - [For-Users](#for-users)
     - [User-Authentication](#for-users)
     - [Product-Browsing](#for-users)
