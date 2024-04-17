@@ -141,3 +141,6 @@ The project follows a standard Django project structure with the following key c
   ## Screenshots
 
   ## Credits
+  - Stripe for payment
+  - My dear friend John Dickson from CI class
+  - 
