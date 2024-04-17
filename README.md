@@ -24,6 +24,10 @@ The application also includes user authentication, a user profile, and a newslet
     - [Installation](#installation)
 - [Learning-Outcomes-and-assesment-criterias](#learning-outcomes-and-assessment-criteria)
     - [Learning-Outcomes](#learning-outcomes)
+    - [Assesment-Criterias](#assessment-criteria)
+    - [Project-Checklist](#project-completion-checklist)
+    - [Project-Structure](#project-structure)
+- [Credits](#credits)    
 
 ## Features
 
