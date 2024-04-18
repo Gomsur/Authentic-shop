@@ -28,7 +28,8 @@ The application also includes user authentication, a user profile, and a newslet
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
 - [Validation](#validation)    
-- [Testing](#testing)    
+- [Testing](#testing)
+- [User-stories](#user-stories)
 - [Credits](#credits)    
 
 ## Features
@@ -177,6 +178,10 @@ The project follows a standard Django project structure with the following key c
   ## Testing
   - Testing phase were built through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
   It can be viewed [here](https://github.com/users/Gomsur/projects/10)
+
+  ## User Stories
+  - User stories have been followed through projects in Github and where completed in three different stages.
+  It can be viewed [here](https://github.com/users/Gomsur/projects/11/views/1)
 
   ## Credits
   - Stripe for payment
