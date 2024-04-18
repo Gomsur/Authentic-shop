@@ -187,7 +187,6 @@ The project follows a standard Django project structure with the following key c
   - Best methods: 100
   - SEO: 90
   - You can see the full analyze [here](media/Products/page%20performance.png)
-    <img src="media/Products/page performance.png>
 
   ## Responsive
   - [Phone](media/Products/responsive%20phone.png)
