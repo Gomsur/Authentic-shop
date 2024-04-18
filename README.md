@@ -27,6 +27,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [Assesment-Criterias](#assessment-criteria)
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
+- [Validation](#validation)    
 - [Testing](#testing)    
 - [Credits](#credits)    
 
