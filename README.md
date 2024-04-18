@@ -192,6 +192,8 @@ The project follows a standard Django project structure with the following key c
   ## Responsive
   - [Phone](media/Products/responsive%20phone.png)
   - [Tablet](media/Products/responsive%20tablet.png)
+    ![phone](media/Products/responsive%20phone.png)
+    ![tablet](media/Products/responsive%20tablet.png)
 
   ## Validation
   - Validation have been made successfully through jigsaw and Validator W3.
