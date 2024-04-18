@@ -209,7 +209,7 @@ The project follows a standard Django project structure with the following key c
     ![phone](media/Products/Wireframe%20phone.png)
 
   ## Testing
-  - Testing phase were built through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
+  - Testing phase were built manually through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
   It can be viewed [here](https://github.com/users/Gomsur/projects/10)
 
   ## User Stories
