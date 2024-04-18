@@ -211,3 +211,4 @@ The project follows a standard Django project structure with the following key c
   - Validator W3
   - Jigsaw
   - Browserstack
+  - Pagespeed
