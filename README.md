@@ -28,6 +28,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
 - [Stripe](#stripe)
+- [Performance](#performance)
 - [Responsiveness](#responsive)
 - [Validation](#validation)
 - [Wireframes](#wireframe)
@@ -174,6 +175,14 @@ The project follows a standard Django project structure with the following key c
   - Stripe have been chosen as a payment solution.
   - [More info about Stripe testing](https://docs.stripe.com/testing)
 
+  ## Performance
+  - Performance were checked through [Pagespeed](https://pagespeed.web.dev/)
+  - Performance: 84
+  - Availability: 88
+  - Best methods: 100
+  - SEO: 90
+  - You can see the full analyze [here](media/Products/page%20performance.png)
+
   ## Responsive
   - [Phone](media/Products/responsive%20phone.png)
   - [Tablet](media/Products/responsive%20tablet.png)
@@ -201,3 +210,4 @@ The project follows a standard Django project structure with the following key c
   - Pixabay for images
   - Validator W3
   - Jigsaw
+  - Browserstack
