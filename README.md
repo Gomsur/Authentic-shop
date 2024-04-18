@@ -27,6 +27,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [Assesment-Criterias](#assessment-criteria)
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
+- [Stripe](#stripe)
 - [Responsiveness](#responsive)
 - [Validation](#validation)
 - [Wireframes](#wireframe)
@@ -168,8 +169,6 @@ The project follows a standard Django project structure with the following key c
     - `urls.py` (URL patterns)
   - `config/` (Project settings and configurations)
   - `manage.py` (Django management script)
-
-  ## Screenshots
 
   ## Stripe
   - Stripe have been chosen as a payment solution.
