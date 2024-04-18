@@ -213,7 +213,7 @@ The project follows a standard Django project structure with the following key c
   It can be viewed [here](https://github.com/users/Gomsur/projects/10)
 
   ## User Stories
-  - User stories have been followed through projects in Github and where completed in three different stages.
+  - User stories have been followed through projects in Github and where built manually, completed in three different stages.
   It can be viewed [here](https://github.com/users/Gomsur/projects/11/views/1)
 
   ## Credits
