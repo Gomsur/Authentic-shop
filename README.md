@@ -169,6 +169,8 @@ The project follows a standard Django project structure with the following key c
   ## Screenshots
 
   ## Stripe
+  - Stripe have been chosen as a payment solution.
+  - [More-info-about-stripe](https://docs.stripe.com/testing)
 
   ## Validation
   - Validation have been made successfully.
