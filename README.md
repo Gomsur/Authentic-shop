@@ -4,7 +4,7 @@ Welcome to our Online Store project! This Full-Stack web application allows user
 Admin users can manage products, categories, and orders. 
 The application also includes user authentication, a user profile, and a newsletter signup feature.
 
-- [Live-Site](http://127.0.0.1:8000/)
+- [Link to Authentic Shop](http://127.0.0.1:8000/)
 
 ## Contents
 
