@@ -205,6 +205,8 @@ The project follows a standard Django project structure with the following key c
   ## Wireframe
   - [Wireframe desktop](media/Products/Wireframe%20desktop.png)
   - [Wireframe phone](media/Products/Wireframe%20phone.png)
+    ![Desktop](media/Products/Wireframe%20desktop.png)
+    ![phone](media/Products/Wireframe%20phone.png)
 
   ## Testing
   - Testing phase were built through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
