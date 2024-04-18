@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Confirmation</title>
+</head>
+<body>
+    <h2>Thank You for Your Payment!</h2>
+    <p>Dear {{ user }},</p>
+    
+    <p>Your payment for order <strong>{{ order.orderId }}</strong> has been successfully processed.</p>
+    
+    <p>Here are the order details:</p>
+    <ul>
+        {% for item in order.orderItems.all %}
+        <li>{{ item.item.title }} - Quantity: {{ item.quantity }} - Price: ${{ item.item.price }}</li>
+        {% endfor %}
+    </ul>
+    
+    <p>Total Amount: ${{ order.get_totals }}</p>
+    
+    <p>Thank you for shopping with us!</p>
+    
+    <p>Best regards,</p>
+    <p>Authentic Shop</p>
+</body>
+</html>

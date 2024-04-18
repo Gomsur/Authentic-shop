@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Order Details{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="d-flex flex-column">
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Order Summary</h2>
+                        <hr>
+                        <h4 class="card-subtitle mb-4 text-muted">Order ID: {{ order.orderId }}</h4>
+                        <h5 class="card-subtitle mb-3 text-muted">Order Date: {{ order.created|date:"F d, Y" }}</h5>
+                        <div class="mb-4">
+                            <h5 class="card-subtitle mb-2 text-muted">Items Purchased:</h5>
+                            {% for item in items %}
+                            <div class="row mb-3">
+                                <div class="col-md-3">
+                                    <img src="{{ item.item.mainImage.url }}" alt="{{ item.item.name }}" class="img-fluid rounded">
+                                </div>
+                                <div class="col-md-9">
+                                    <h5 class="card-title">{{ item.item.name }}</h5>
+                                    <p class="card-text">Quantity: {{ item.quantity }}</p>
+                                    <p class="card-text">Price: &#36; {{ item.item.price|floatformat:2 }}</p>
+                                    {% comment %}
+                                    <!-- Display reviews -->
+                                    {% if item.reviews %}
+                                    <h5>Reviews:</h5>
+                                    <ul>
+                                        {% for review in item.reviews %}
+                                        <li>{{ review.user.username }}: {{ review.rating }} stars - {{ review.comment }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% else %}
+                                    <p>No reviews yet.</p>
+                                    {% endif %}
+                                    {% endcomment %}
+                                    <!-- Display review button if user hasn't reviewed -->
+                                    {% if not item.already_reviewed %}
+                                    <a href="{% url 'shop:add_review' pk=item.item.pk %}" class="btn btn-primary">Add Review</a>
+                                    {% else %}
+                                    <!-- Display message indicating user has already reviewed -->
+                                    <div class="alert alert-warning" role="alert">
+                                        You have already reviewed this product.
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <hr>
+                        <h3 class="card-title">Total Amount: &#36; {{ order.get_totals|floatformat:2 }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="d-flex flex-column">
+                <div class="card bg-light shadow mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">Shipping Details</h2>
+                        <hr>
+                        <p class="card-text"><strong>Full Name:</strong> {{ order.user.profile.full_name }}</p>
+                        <p class="card-text"><strong>Email:</strong> {{ order.user.email }}</p>
+                        <p class="card-text"><strong>Contact Number:</strong> {{ order.user.profile.phone }}</p>
+                        {% if order.user.billingaddress_set.exists %}
+                            {% with billing_address=order.user.billingaddress_set.first %}
+                                <h5 class="card-title mt-4 mb-3">Shipping Address:</h5>
+                                <address class="mb-0">
+                                    <p>{{ billing_address.address }}</p>
+                                    <p>{{ billing_address.city }}, {{ billing_address.zipcode }}</p>
+                                    <p>{{ billing_address.country }}</p>
+                                </address>
+                                <p class="card-text"><strong>City:</strong> {{ billing_address.city }}</p>
+                                <p class="card-text"><strong>Zip Code:</strong> {{ billing_address.zipcode }}</p>
+                                <p class="card-text"><strong>Country:</strong> {{ billing_address.country }}</p>
+                            {% endwith %}
+                        {% else %}
+                            <p class="card-text mt-4">No shipping details found.</p>
+                        {% endif %}                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

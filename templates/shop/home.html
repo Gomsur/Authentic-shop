@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="my-3">Categories:</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="{% url 'shop:home' %}" class="list-group-item list-group-item-action active">All</a>
+                {% for category in categories %}
+                    <a href="?category={{ category.id }}" class="list-group-item list-group-item-action">{{ category.title }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                {% for product in object_list %}
+                    <div class="col-md-4 mb-4">
+                        <figure class="card card-product shadow-sm">
+                            <div class="img-wrap">
+                                <img src="{{ product.mainImage.url }}" alt="{{ product.name }}" class="img-fluid rounded">
+                            </div>
+                            <figcaption class="info-wrap p-3">
+                                <h5 class="title mb-0"><a href="{% url 'shop:product_detail' pk=product.pk %}" class="text-dark">{{ product.name }}</a></h5>
+                                <div class="price-wrap">
+                                    {% if product.old_price %}
+                                        <span class="price-old">&#36; {{ product.old_price|floatformat:2 }}</span>
+                                    {% endif %}
+                                    <span class="price-new h5">&#36; {{ product.price|floatformat:2 }}</span>
+                                </div>
+                                <div class="action-wrap mt-2">
+                                    <a href="{% url 'shop:product_detail' pk=product.pk %}" class="btn btn-sm btn-primary btn-block">View Details</a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

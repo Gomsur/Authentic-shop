@@ -1,0 +1,196 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title">Pay with Stripe</h2>
+          <p class="text-center">Order Total: ${{ total|floatformat:2 }}</p>
+          <form id="payment-form" method="post" action="{% url 'payment:payment_stripe' %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="card-number" class="input-label">
+                <i class="fas fa-credit-card"></i> Card Number
+              </label>
+              <div id="card-number" class="form-control"></div>
+              <div id="card-brand" class="mt-2"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="card-expiry" class="input-label">
+                    <i class="fas fa-calendar"></i> Expiry Date
+                  </label>
+                  <div id="card-expiry" class="form-control"></div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="card-cvc" class="input-label">
+                    <i class="fas fa-lock"></i> CVC
+                  </label>
+                  <div id="card-cvc" class="form-control"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Used to display form errors. -->
+            <div id="card-errors" role="alert"></div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Submit Payment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .input-label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .input-label i {
+    margin-right: 0.5rem;
+  }
+
+  .form-control {
+    position: relative;
+    height: 45px;
+  }
+
+  .form-control input {
+    padding-left: 2rem;
+  }
+
+  .form-group #card-brand {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .form-group #card-brand i {
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .form-control {
+      height: 50px;
+    }
+
+    .form-control input {
+      padding-left: 2.5rem;
+    }
+
+    .form-group #card-brand i {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  var stripe = Stripe('{{ key }}');
+  var elements = stripe.elements();
+  var style = {
+    base: {
+      fontSize: '16px',
+      color: '#32325d',
+      fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+      '::placeholder': {
+        color: '#aab7c4'
+      }
+    },
+    invalid: {
+      color: '#fa755a',
+      iconColor: '#fa755a'
+    }
+  };
+
+  var cardNumber = elements.create('cardNumber', {
+    style: style,
+    placeholder: '1234 5678 9012 3456'
+  });
+  cardNumber.mount('#card-number');
+
+  var cardExpiry = elements.create('cardExpiry', {
+    style: style,
+    placeholder: 'MM / YY'
+  });
+  cardExpiry.mount('#card-expiry');
+
+  var cardCvc = elements.create('cardCvc', {
+    style: style,
+    placeholder: 'CVC'
+  });
+  cardCvc.mount('#card-cvc');
+
+  cardNumber.on('change', function(event) {
+    var displayError = document.getElementById('card-errors');
+    if (event.error) {
+      displayError.textContent = event.error.message;
+    } else {
+      displayError.textContent = '';
+      if (event.brand) {
+        var cardBrandElement = document.getElementById('card-brand');
+        var cardBrandIcon = document.createElement('i');
+        cardBrandIcon.classList.add('fab');
+        switch (event.brand) {
+          case 'visa':
+            cardBrandIcon.classList.add('fa-cc-visa');
+            break;
+          case 'mastercard':
+            cardBrandIcon.classList.add('fa-cc-mastercard');
+            break;
+          case 'amex':
+            cardBrandIcon.classList.add('fa-cc-amex');
+            break;
+          case 'discover':
+            cardBrandIcon.classList.add('fa-cc-discover');
+            break;
+          case 'diners':
+            cardBrandIcon.classList.add('fa-cc-diners-club');
+            break;
+          case 'jcb':
+            cardBrandIcon.classList.add('fa-cc-jcb');
+            break;
+          default:
+            cardBrandIcon.classList.add('fa-credit-card');
+        }
+        cardBrandElement.innerHTML = '';
+        cardBrandElement.appendChild(cardBrandIcon);
+      }
+    }
+  });
+
+  var form = document.getElementById('payment-form');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    stripe.createToken(cardNumber).then(function(result) {
+      if (result.error) {
+        var errorElement = document.getElementById('card-errors');
+        errorElement.textContent = result.error.message;
+      } else {
+        stripeTokenHandler(result.token);
+      }
+    });
+  });
+
+  function stripeTokenHandler(token) {
+    var form = document.getElementById('payment-form');
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+    form.submit();
+  }
+</script>
+{% endblock %}

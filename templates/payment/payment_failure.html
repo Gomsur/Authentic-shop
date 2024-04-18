@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Payment Failure{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card border-danger shadow">
+        <div class="card-body">
+            <h2 class="card-title text-danger">Payment Failed</h2>
+            <p class="card-text">There was an issue processing your payment.</p>
+            <!-- Additional instructions or information for the user -->
+            <div class="text-center">
+                <a href="{% url 'shop:home' %}" class="btn btn-danger btn-lg">
+                    <i class="fas fa-home mr-2"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock %}

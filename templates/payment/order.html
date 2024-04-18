@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="text-center"><strong>Your Orders</strong></h1>
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Order ID</th>
+                                    <th scope="col">Products</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td><a href="{% url 'payment:order_details' order_id=order.id %}">{{ order.orderId }}</a></td>
+                                    <td>
+                                        {% for item in order.orderItems.all %}
+                                            <div class="d-flex align-items-center mb-2">
+                                                <img src="{{ item.item.mainImage.url }}" alt="{{ item.item.name }}" class="img-thumbnail mr-3" style="max-width: 60px;">
+                                                <div>
+                                                    <p class="mb-0"><strong>{{ item.item.name }}</strong></p>
+                                                    <p class="mb-0">Quantity: {{ item.quantity }}</p>
+                                                </div>
+                                            </div>
+                                            {% if not forloop.last %}<hr class="my-2">{% endif %}
+                                        {% endfor %}
+                                    </td>
+                                    <td>USD {{ order.get_totals }}</td>
+                                    <td>
+                                        {% if order.ordered %}
+                                            <span class="badge badge-success">Completed</span>
+                                        {% else %}
+                                            <span class="badge badge-warning">Processing</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="5" class="text-center">No orders yet.</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

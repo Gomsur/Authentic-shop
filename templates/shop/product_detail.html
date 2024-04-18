@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card">
+        <div class="row">
+            <!-- Product Image Section -->
+            <aside class="col-md-5 border-right">
+                <article class="gallery-wrap">
+                    <div class="img-big-wrap">
+                        <a href="#" data-toggle="modal" data-target="#productImageModal">
+                            <img src="{{ object.mainImage.url }}" alt="{{ object.name }}" class="img-fluid rounded">
+                        </a>
+                    </div>
+                </article>
+            </aside>
+            <!-- Product Details Section -->
+            <aside class="col-md-7">
+                <article class="card-body p-5">
+                    <h2 class="title mb-4">{{ object.name }}</h2>
+                    <div class="mb-4">
+                        <span class="price h3 text-warning">
+                            <span class="currency">USD &#36;</span><span class="num">{{ object.price }}</span>
+                        </span>
+                    </div>
+                    <dl class="item-property">
+                        <dt>Description:</dt>
+                        <dd>
+                            <p>{{ object.detail_text|linebreaks }}</p>
+                        </dd>
+                    </dl>
+                    <!-- Add to Cart Button -->
+                    <a href="{% url 'order:add_to_cart' pk=object.pk %}" class="btn btn-lg btn-outline-primary text-uppercase">
+                        <i class="fas fa-shopping-cart mr-2"></i> Add to Cart
+                    </a>
+                </article>
+            </aside>
+        </div>
+    </div>
+    
+    <!-- Product Reviews Section -->
+    <div class="mt-5">
+        <h3>Product Reviews</h3>
+        {% if object.reviews.all %}
+            <div class="row">
+                {% for review in object.reviews.all %}
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ review.user.username }}</h5>
+                                <p class="card-text">Rating: {{ review.rating }}</p>
+                                <p class="card-text">{{ review.comment }}</p>
+                                <small class="text-muted">Posted on: {{ review.date_added }}</small>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No reviews yet.</p>
+        {% endif %}
+    </div>
+
+</div>
+
+<!-- Product Image Modal -->
+<div class="modal fade" id="productImageModal" tabindex="-1" role="dialog" aria-labelledby="productImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productImageModalLabel">{{ object.name }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{{ object.mainImage.url }}" alt="{{ object.name }}" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

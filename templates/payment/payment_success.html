@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Payment Success{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card border-success shadow">
+        <div class="card-body">
+            <h2 class="card-title text-success">Payment Successful</h2>
+            <p class="card-text">Thank you for your order!</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Order ID:</strong> {{ order.orderId }}</p>
+                    <p><strong>Total Amount:</strong> ${{ order.get_totals|floatformat:2 }}</p>
+                    <!-- Additional order details if needed -->
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <a href="{% url 'payment:order_details' order_id=order.id %}" class="btn btn-success btn-lg">
+                    <i class="fas fa-receipt mr-2"></i> View Order Details
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+{% endblock %}
