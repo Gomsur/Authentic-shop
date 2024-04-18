@@ -181,6 +181,7 @@ The project follows a standard Django project structure with the following key c
   ## Facebook
   - A Facebook site was created to market our brand, it can be found below.
   - [Authentic-Shop-Facebook](https://www.facebook.com/people/Authentic-shop/61558441835330/?mibextid=LQQJ4d)
+    ![Facebook page](media/Products/facebook%20business.png)
 
   ## Performance
   - Performance were checked through [Pagespeed](https://pagespeed.web.dev/)
