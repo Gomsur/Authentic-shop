@@ -27,7 +27,8 @@ The application also includes user authentication, a user profile, and a newslet
     - [Assesment-Criterias](#assessment-criteria)
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
-- [Validation](#validation)    
+- [Validation](#validation)
+- [Wireframes](#wireframe)
 - [Testing](#testing)
 - [User-stories](#user-stories)
 - [Credits](#credits)    
@@ -194,3 +195,5 @@ The project follows a standard Django project structure with the following key c
   - Stripe for payment
   - My dear friend John Dickson from CI class
   - Pixabay for images
+  - Validator W3
+  - Jigsaw
