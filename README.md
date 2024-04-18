@@ -174,7 +174,11 @@ The project follows a standard Django project structure with the following key c
   - [More info about Stripe testing](https://docs.stripe.com/testing)
 
   ## Validation
-  - Validation have been made successfully.
+  - Validation have been made successfully through jigsaw and Validator W3.
+  - [HTML](media/Products/validation%20html.png)
+  - [CSS](media/Products/validation%20css.png)
+
+  ## Wireframe
   - [Wireframe desktop](media/Products/Wireframe%20desktop.png)
   - [Wireframe phone](media/Products/Wireframe%20phone.png)
 
