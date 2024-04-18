@@ -67,6 +67,7 @@ The application also includes user authentication, a user profile, and a newslet
 
   ### Development Methodology
   - **Agile Methodologies:** Agile practices were followed during the development process, with regular updates and feature additions in the GitHub repository.
+  [Agile](https://github.com/users/Gomsur/projects/12/views/1)
 
   ### SEO and Marketing
 
