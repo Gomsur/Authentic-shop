@@ -27,6 +27,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [Assesment-Criterias](#assessment-criteria)
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
+- [Responsiveness](#responsive)
 - [Validation](#validation)
 - [Wireframes](#wireframe)
 - [Testing](#testing)
@@ -173,6 +174,10 @@ The project follows a standard Django project structure with the following key c
   ## Stripe
   - Stripe have been chosen as a payment solution.
   - [More info about Stripe testing](https://docs.stripe.com/testing)
+
+  ## Responsive
+  - [Phone](media/Products/responsive%20phone.png)
+  - [Tablet](media/Products/responsive%20tablet.png)
 
   ## Validation
   - Validation have been made successfully through jigsaw and Validator W3.
