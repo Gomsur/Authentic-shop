@@ -168,6 +168,10 @@ The project follows a standard Django project structure with the following key c
 
   ## Stripe
 
+  ## Testing
+  - Testing phase were built through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
+  It can be viewed [here](https://github.com/users/Gomsur/projects/10)
+
   ## Credits
   - Stripe for payment
   - My dear friend John Dickson from CI class
