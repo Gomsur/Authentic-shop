@@ -77,7 +77,7 @@ def paymentStripe(request):
                 orderId = get_random_string(length=16, allowed_chars=u'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
                 order.ordered = True
                 order.paymentId = charge.id
-                order.orderId = f'#{orderId}'  # Generating and assigning order ID
+                order.orderId = f'#{orderId}'
                 order.save()
                 
                 cartItems = Cart.objects.filter(user=request.user)

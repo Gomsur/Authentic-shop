@@ -18,7 +18,6 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -48,6 +47,9 @@ INSTALLED_APPS = [
     'order',
     'payment',
     'newsletter',
+
+
+    'django.contrib.sitemaps',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -176,3 +178,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'advertise.website0994@gmail.com'
 EMAIL_HOST_PASSWORD = 'rmzs syuu fewh bbos'
+
+DEFAULT_FROM_EMAIL = 'your-email@example.com'
+CONTACT_EMAIL = 'omarfaruk2468@gmail.com'

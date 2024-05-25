@@ -1,8 +1,6 @@
 from django.db import models
-
 from django.conf import settings
 
-# Create your models here.
 
 class BillingAddress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
@@ -14,7 +12,6 @@ class BillingAddress(models.Model):
     def __str__(self):
         return f'{self.user.profile.username} billing address'
 
-    # Function to check that have we filled up all the field or not.
     def is_fully_filled(self):
         field_names = [f.name for f in self._meta.get_fields()]
 
@@ -24,6 +21,5 @@ class BillingAddress(models.Model):
                 return False
         return True
 
-    # To make the table name plural.
     class Meta:
         verbose_name_plural = "Billing Address"

@@ -8,9 +8,38 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto align-items-center">
+                {% if user.is_authenticated and user.is_staff %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="adminDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Admin Actions</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdown">
+                        <a class="dropdown-item" href="{% url 'shop:add_product' %}">
+                            <i class="fas fa-plus"></i> Add Product
+                        </a>
+                        <a class="dropdown-item" href="{% url 'shop:product_list' %}">
+                            <i class="fas fa-list"></i> Product List
+                        </a>
+                        <a class="dropdown-item" href="{% url 'shop:add_category' %}">
+                            <i class="fas fa-plus"></i> Add Category
+                        </a>
+                        <a class="dropdown-item" href="{% url 'newsletter:subscriber_list' %}">
+                            <i class="fas fa-envelope"></i> Subscribers
+                        </a>
+                    </div>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a href="{% url 'shop:category_list' %}" class="nav-link">
+                        <i class="fas fa-folder"></i> Categories</a>
+                </li>
                 <li class="nav-item">
                     <a href="{% url 'newsletter:about' %}" class="nav-link">
-                        <i class="fas fa-info-circle"></i> About</a>
+                        <i class="fas fa-info"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'newsletter:contact' %}" class="nav-link">
+                        <i class="fas fa-envelope"></i> Contact</a>
                 </li>
                 {% if request.user.is_authenticated %}
                 <li class="nav-item">
@@ -41,7 +70,7 @@
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a href="{% url 'accounts:login' %}" class="nav-link btn btn-primary text-white px-2">
+                    <a href="{% url 'accounts:login' %}" class="nav-link btn btn-primary text-white">
                         <i class="fas fa-sign-in-alt mr-1"></i> Login
                     </a>
                 </li>

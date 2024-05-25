@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-4">
+    <div class="card">
+        <div class="card-header">
+            <h1 class="card-title">Subscriber List</h1>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for subscriber in subscribers %}
+                <li class="list-group-item">
+                    <a href="{% url 'newsletter:subscriber_detail' pk=subscriber.pk %}">{{ subscriber.email }}</a>
+                </li>
+                {% empty %}
+                <li class="list-group-item">No subscribers found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
