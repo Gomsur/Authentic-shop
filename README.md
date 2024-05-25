@@ -4,6 +4,8 @@ Welcome to our Online Store project! This Full-Stack web application allows user
 Admin users can manage products, categories, and orders. 
 The application also includes user authentication, a user profile, and a newsletter signup feature.
 
+- [Link to Authentic Shop](https://chipotle.pythonanywhere.com/)
+
 ## Contents
 
 - [Features](#features)
@@ -27,6 +29,14 @@ The application also includes user authentication, a user profile, and a newslet
     - [Assesment-Criterias](#assessment-criteria)
     - [Project-Checklist](#project-completion-checklist)
     - [Project-Structure](#project-structure)
+- [Stripe](#stripe)
+- [Facebook](#facebook)
+- [Performance](#performance)
+- [Responsiveness](#responsive)
+- [Validation](#validation)
+- [Wireframes](#wireframe)
+- [Testing](#testing)
+- [User-stories](#user-stories)
 - [Credits](#credits)    
 
 ## Features
@@ -64,6 +74,7 @@ The application also includes user authentication, a user profile, and a newslet
 
   ### Development Methodology
   - **Agile Methodologies:** Agile practices were followed during the development process, with regular updates and feature additions in the GitHub repository.
+  [Agile](https://github.com/users/Gomsur/projects/12/views/1)
 
   ### SEO and Marketing
 
@@ -163,11 +174,56 @@ The project follows a standard Django project structure with the following key c
   - `config/` (Project settings and configurations)
   - `manage.py` (Django management script)
 
-  ## Screenshots
-
   ## Stripe
+  - Stripe have been chosen as a payment solution.
+  - [More info about Stripe testing](https://docs.stripe.com/testing)
+
+  ## Facebook
+  - A Facebook site was created to market our brand, it can be found below.
+  - [Authentic-Shop-Facebook](https://www.facebook.com/people/Authentic-shop/61558441835330/?mibextid=LQQJ4d)
+    ![Facebook page](media/Products/facebook%20business.png)
+
+  ## Performance
+  - Performance were checked through [Pagespeed](https://pagespeed.web.dev/)
+  - Performance: 84
+  - Availability: 88
+  - Best methods: 100
+  - SEO: 90
+  - You can see the full analyze [here](media/Products/page%20performance.png)
+    ![image](media/Products/page%20performance.png)
+
+  ## Responsive
+  - [Phone](media/Products/responsive%20phone.png)
+  - [Tablet](media/Products/responsive%20tablet.png)
+    ![phone](media/Products/responsive%20phone.png)
+    ![tablet](media/Products/responsive%20tablet.png)
+
+  ## Validation
+  - Validation have been made successfully through jigsaw and Validator W3.
+  - [HTML](media/Products/validation%20html.png)
+  - [CSS](media/Products/validation%20css.png)
+    ![html](media/Products/validation%20html.png)
+    ![css](media/Products/validation%20css.png)
+
+  ## Wireframe
+  - [Wireframe desktop](media/Products/Wireframe%20desktop.png)
+  - [Wireframe phone](media/Products/Wireframe%20phone.png)
+    ![Desktop](media/Products/Wireframe%20desktop.png)
+    ![phone](media/Products/Wireframe%20phone.png)
+
+  ## Testing
+  - Testing phase were built manually through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
+  It can be viewed [here](https://github.com/users/Gomsur/projects/10)
+
+  ## User Stories
+  - User stories have been followed through projects in Github and where built manually, completed in three different stages.
+  It can be viewed [here](https://github.com/users/Gomsur/projects/11/views/1)
 
   ## Credits
   - Stripe for payment
   - My dear friend John Dickson from CI class
-  - 
+  - Pixabay for images
+  - Validator W3
+  - Jigsaw
+  - Browserstack
+  - Pagespeed
