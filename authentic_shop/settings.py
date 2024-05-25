@@ -180,4 +180,4 @@ EMAIL_HOST_USER = 'advertise.website0994@gmail.com'
 EMAIL_HOST_PASSWORD = 'rmzs syuu fewh bbos'
 
 DEFAULT_FROM_EMAIL = 'your-email@example.com'
-CONTACT_EMAIL = 'omarfaruk2468@gmail.com'
+CONTACT_EMAIL = 'robert@eddiebengtsson.se'
