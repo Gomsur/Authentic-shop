@@ -90,6 +90,7 @@ The application also includes user authentication, a user profile, and a newslet
   ## Search engine optimisation
   - A sitemap.xml file was created and added to the project root.
   - A robots.txt file was created and added to the project root.
+  - Meta description tags have been added.
 
   ## Digital Marketing
   - **Facebook Business Page:** A real or mockup Facebook business page is utilized for digital marketing efforts.
