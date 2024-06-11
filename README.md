@@ -18,7 +18,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [Newsletter-signup](#for-users)
 - [For-Admin](#for-admin)
     - [Admin-Dashboard](#for-admin)
-- [Structure]
+- [Structure](#structure)
     - [Data-storage](#data-storage)
 - [Development-Methodologies](#development-methodology)
 - [SEO-And-Marketing](#seo-and-marketing)
@@ -82,7 +82,7 @@ The application also includes user authentication, a user profile, and a newslet
   - View and manage orders: Mark orders as fulfilled, and view order details.
   - Can manage users.
   - View user reviews and manage them.
-
+  ### Structure
   ## Data storage
   The PostgreSQL database structure was meticulously defined and mapped out using a database schema, ensuring the necessary data interactions for developing a usable and robust product. The core of this schema is the Product model, which encapsulates the essential properties of an online business product.
 
