@@ -104,6 +104,11 @@ The application also includes user authentication, a user profile, and a newslet
   - **Facebook Business Page:** A real or mockup Facebook business page is utilized for digital marketing efforts.
   - **Newsletter Signup:** A newsletter signup form is available for users to subscribe to updates and promotions.
 
+  ## Facebook
+  - A Facebook site was created to market our brand on social media, this is crucial to reach our customers and keep them loyal.
+  - [Authentic-Shop-Facebook](https://www.facebook.com/people/Authentic-shop/61558441835330/?mibextid=LQQJ4d)
+    ![Facebook page](media/Products/facebook%20business.png)
+
   ## Technologies Used
 
   - **Frontend:**
@@ -199,11 +204,6 @@ The project follows a standard Django project structure with the following key c
   ## Stripe
   - Stripe have been chosen as a payment solution.
   - [More info about Stripe testing](https://docs.stripe.com/testing)
-
-  ## Facebook
-  - A Facebook site was created to market our brand, it can be found below.
-  - [Authentic-Shop-Facebook](https://www.facebook.com/people/Authentic-shop/61558441835330/?mibextid=LQQJ4d)
-    ![Facebook page](media/Products/facebook%20business.png)
 
   ## Performance
   - Performance were checked through [Pagespeed](https://pagespeed.web.dev/)
