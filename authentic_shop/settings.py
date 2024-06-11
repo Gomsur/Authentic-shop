@@ -25,10 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-nc%*a!oggd3)tytwk_a&13fwy6pka4jwydot8jx01$u94nu88@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -99,16 +98,17 @@ DATABASES = {
 }
 
 # PostgreSQL
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': 'uorjFtIHtdZspCXHPFubdTXHjrgshmxF',
-#         'HOST': 'viaduct.proxy.rlwy.net',
-#         'PORT': '34751',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'uorjFtIHtdZspCXHPFubdTXHjrgshmxF',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '34751',
+    }
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
