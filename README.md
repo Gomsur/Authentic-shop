@@ -19,7 +19,7 @@ The application also includes user authentication, a user profile, and a newslet
 - [For-Admin](#for-admin)
     - [Admin-Dashboard](#for-admin)
 - [Structure](#data-storage)
-    - [#Data-storage]
+    - [Data-storage]
 - [Development-Methodologies](#development-methodology)
 - [SEO-And-Marketing](#seo-and-marketing)
 - [Search-Engine-Optimisation](#search-engine-optimisation)
