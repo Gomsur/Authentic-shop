@@ -18,6 +18,8 @@ The application also includes user authentication, a user profile, and a newslet
     - [Newsletter-signup](#for-users)
 - [For-Admin](#for-admin)
     - [Admin-Dashboard](#for-admin)
+- [Structure](#data-storage)
+    - [#Data-storage]
 - [Development-Methodologies](#development-methodology)
 - [SEO-And-Marketing](#seo-and-marketing)
 - [Digital-Marketing](#digital-marketing)
@@ -71,6 +73,9 @@ The application also includes user authentication, a user profile, and a newslet
   - View and manage orders: Mark orders as fulfilled, and view order details.
   - Can manage users.
   - View user reviews and manage them.
+
+  ## Data storage
+  ![image](media/Products/ERD.png)
 
   ### Development Methodology
   - **Agile Methodologies:** Agile practices were followed during the development process, with regular updates and feature additions in the GitHub repository.
