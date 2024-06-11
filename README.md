@@ -214,6 +214,7 @@ The project follows a standard Django project structure with the following key c
     ![css](media/Products/validation%20css.png)
 
   ## Wireframe
+  - When building the wireframe for our project, we have gone for a simple, clean scandinavian look of our site that would suit an ecommerce brand with a large product range and category page as we want the site to convert.
   - [Wireframe desktop](media/Products/Wireframe%20desktop.png)
   - [Wireframe phone](media/Products/Wireframe%20phone.png)
     ![Desktop](media/Products/Wireframe%20desktop.png)
