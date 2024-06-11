@@ -70,7 +70,15 @@ The application also includes user authentication, a user profile, and a newslet
 
 ### For Admin:
 - **Admin Dashboard:**
-  - Manage products: Add, edit, and delete products with categories.
+  - Add products through the frontend
+  - Add categories through the frontend
+  - View subscribers
+  - View and take actions on product lists
+  - Easily add products to a specific category
+  - Easily add images by an upload option of a product
+  - Easily add and edit descriptions of a product
+  - Easily reduce the price of a product
+  - Have an overview of our product list to keep track with different ID's
   - View and manage orders: Mark orders as fulfilled, and view order details.
   - Can manage users.
   - View user reviews and manage them.
