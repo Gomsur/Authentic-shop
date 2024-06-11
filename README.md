@@ -226,8 +226,9 @@ When building the wireframe for our project, we have gone for a simple, clean sc
     ![phone](media/Products/Wireframe%20phone.png)
 
   ## Testing
-  - Testing phase were built manually through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
-  It can be viewed [here](https://github.com/users/Gomsur/projects/10)
+  - Testing have been done both manually and dymanically, manually through projects in Github and were completed in three different stages, from first phase, to second to the last step that were completed.
+  - Manual testing can be seen [here](https://github.com/users/Gomsur/projects/10)
+  - Testing have also been done dymanically through a tests.py file.
 
   ## User Stories
   - User stories have been followed through projects in Github and where built manually, completed in three different stages.
