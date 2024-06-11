@@ -22,6 +22,7 @@ The application also includes user authentication, a user profile, and a newslet
     - [#Data-storage]
 - [Development-Methodologies](#development-methodology)
 - [SEO-And-Marketing](#seo-and-marketing)
+- [Search-Engine-Optimisation](#search-engine-optimisation)
 - [Digital-Marketing](#digital-marketing)
 - [Technologies](#technologies-used)
 - [Getting-started](#getting-started)
@@ -86,7 +87,11 @@ The application also includes user authentication, a user profile, and a newslet
 
   ### SEO and Marketing
 
-  ### Digital Marketing
+  ## Search engine optimisation
+  - A sitemap.xml file was created and added to the project root.
+  - A robots.txt file was created and added to the project root.
+
+  ## Digital Marketing
   - **Facebook Business Page:** A real or mockup Facebook business page is utilized for digital marketing efforts.
   - **Newsletter Signup:** A newsletter signup form is available for users to subscribe to updates and promotions.
 
