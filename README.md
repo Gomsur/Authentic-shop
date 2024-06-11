@@ -75,6 +75,9 @@ The application also includes user authentication, a user profile, and a newslet
   - View user reviews and manage them.
 
   ## Data storage
+  The PostgreSQL database structure was meticulously defined and mapped out using a database schema, ensuring the necessary data interactions for developing a usable and robust product. The core of this schema is the Product model, which encapsulates the essential properties of an online business product.
+
+  This comprehensive and interconnected schema not only supports the core functionalities of an e-commerce platform but also provides a scalable foundation for future enhancements.
   ![image](media/Products/ERD.png)
 
   ### Development Methodology
