@@ -18,8 +18,8 @@ The application also includes user authentication, a user profile, and a newslet
     - [Newsletter-signup](#for-users)
 - [For-Admin](#for-admin)
     - [Admin-Dashboard](#for-admin)
-- [Structure](#data-storage)
-    - [Data-storage]
+- [Structure]
+    - [Data-storage](#data-storage)
 - [Development-Methodologies](#development-methodology)
 - [SEO-And-Marketing](#seo-and-marketing)
 - [Search-Engine-Optimisation](#search-engine-optimisation)
