@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} Create New Account {% endblock title %}
+{% block title %}Create New Account{% endblock title %}
 
 {% block content %}
 <div class="container mt-5">
@@ -13,7 +13,31 @@
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token %}
-                        {{ form|crispy }}
+                        {{ form.email|as_crispy_field }}
+
+                        <div class="form-group">
+                            {{ form.password1.label_tag }}
+                            <input type="password" name="password1" autocomplete="new-password" class="form-control" required aria-describedby="id_password1_helptext" id="id_password1">
+                            <small id="id_password1_helptext" class="form-text text-muted">
+                                Your password must contain:
+                            </small>
+                            <ul>
+                                <li>At least 8 characters.</li>
+                                <li>At least one letter and one number.</li>
+                                <li>Not be too similar to your personal information.</li>
+                                <li>Not be a commonly used password.</li>
+                                <li>Not be entirely numeric.</li>
+                            </ul>
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.password2.label_tag }}
+                            <input type="password" name="password2" autocomplete="new-password" class="form-control" required aria-describedby="id_password2_helptext" id="id_password2">
+                            <small id="id_password2_helptext" class="form-text text-muted">
+                                Enter the same password as before, for verification.
+                            </small>
+                        </div>
+
                         <button type="submit" class="btn btn-success btn-block mt-3">Create Account</button>
                     </form>
                     <hr>
